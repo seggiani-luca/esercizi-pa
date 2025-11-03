@@ -1,3 +1,6 @@
 *.class
 nb-configuration.xml
 *.lst
+/code_prio/target/
+/memoria/target/
+/negozio/target/
