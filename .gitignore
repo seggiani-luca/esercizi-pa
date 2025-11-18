@@ -10,3 +10,6 @@ nb-configuration.xml
 /moby/target/
 /sala/target/
 /sala_meglio/target/
+/bar/target/
+/rfi/target/
+/log3j/target/

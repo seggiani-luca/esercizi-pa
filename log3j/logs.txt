@@ -1,0 +1,6 @@
+0	test
+1	prova
+2	ganzo
+3	vai
+4	bufbuf
+0	prova
