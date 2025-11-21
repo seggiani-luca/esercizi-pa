@@ -3,16 +3,19 @@ package luca.log3j;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.Instant;
 
 public class Logger {
 
   private class Messaggio {
 
     private final String testo;
+    private final String chi;
     private final int ordine;
 
-    public Messaggio(String testo, int ordine) {
+    public Messaggio(String testo, String chi, int ordine) {
       this.testo = testo;
+      this.chi = chi;
       this.ordine = ordine;
     }
 
@@ -26,7 +29,7 @@ public class Logger {
 
     @Override
     public String toString() {
-      return ordine + "\t" + testo;
+      return ordine + "\t" + chi + "\t" + testo;
     }
   }
 
@@ -34,9 +37,15 @@ public class Logger {
   private final Messaggio[] buf;
   private int base = 0;
 
-  public Logger(String fileName, int num) {
+  public Logger(String fileName, int num) throws IOException {
     this.fileName = fileName;
     buf = new Messaggio[num];
+
+    File file = new File(fileName);
+
+    try (FileWriter writer = new FileWriter(file, true)) {
+      writer.write("\n--- " + Instant.now().toString() + " ---\n");
+    }
   }
 
   public synchronized void log(String testo, int ordine) throws IOException, InterruptedException {
@@ -44,44 +53,45 @@ public class Logger {
       throw new RuntimeException("Rilevato viaggio nel tempo");
     }
 
-    Messaggio mess = new Messaggio(testo, ordine);
+    Messaggio mess = new Messaggio(testo, Thread.currentThread().getName(), ordine);
 
-    System.out.println("Richiesto di loggare messaggio:\t" + mess);
+    System.out.println("Richiesto di loggare (base: " + base + "):\t" + mess);
+
+    while (ordine >= base + buf.length) {
+      // fuori ordine non bufferizzabile
+      System.out.println("Impossibile bufferizzare (base: " + base + "):\t" + mess);
+      wait();
+    }
 
     if (ordine == base) {
       // in ordine
       mess.scrivi();
-      System.out.println("Messaggio loggato subito");
+      System.out.println("Messaggio loggato subito:\t" + mess);
 
-      base = (base + 1) % buf.length;
+      base++;
 
-      while (buf[base] != null) {
-        buf[base].scrivi();
-        System.out.println("Avanzato messaggio:\t" + buf[base]);
+      int baseIdx = base % buf.length;
+      while (buf[baseIdx] != null) {
+        buf[baseIdx].scrivi();
+        System.out.println("Avanzato messaggio:\t" + buf[baseIdx]);
 
-        base = (base + 1) % buf.length;
+        buf[baseIdx] = null;
+        base++;
+        baseIdx = base % buf.length;
       }
 
       notifyAll();
 
     } else {
-      // fuori ordine
+      // fuori ordine bufferizzabile
+      int ordineIdx = ordine % buf.length;
 
-      while (ordine >= base + buf.length) {
-        // non bufferizzabile
-        System.out.println("Impossibile bufferizzare messaggio:\t" + mess);
-        wait();
-      }
-
-      // bufferizzabile
-      int idx = ordine % buf.length;
-
-      if (buf[idx] != null && buf[idx].ordine == ordine) {
+      if (buf[ordineIdx] != null) {
         throw new RuntimeException("Rilevati numeri d'ordine duplicati");
       }
 
-      buf[idx] = mess;
-      System.out.println("Bufferizzato messaggio:\t" + buf[idx]);
+      buf[ordineIdx] = mess;
+      System.out.println("Bufferizzato messaggio:\t" + buf[ordineIdx]);
     }
   }
 }

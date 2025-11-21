@@ -1,6 +1,258 @@
-0	test
-1	prova
-2	ganzo
-3	vai
-4	bufbuf
-0	prova
+
+--- 2025-11-19T09:13:35.059521629Z ---
+0	Thread-0	connecting to database
+1	Thread-0	starting HTTP server
+2	Thread-0	initialized configuration
+3	Thread-0	connecting to database
+4	Thread-0	shutting down service
+5	Thread-0	starting HTTP server
+6	Thread-0	connecting to database
+7	Thread-0	HTTP server listening on port 8080
+8	Thread-0	closed database connection
+9	Thread-0	shutting down service
+10	Thread-1	closed database connection
+11	Thread-1	closed database connection
+12	Thread-1	connected to database
+13	Thread-1	initialized configuration
+14	Thread-1	connected to database
+15	Thread-1	validated request headers
+16	Thread-1	connecting to database
+17	Thread-1	shutting down service
+18	Thread-1	loaded environment variables
+19	Thread-1	HTTP server listening on port 8080
+
+--- 2025-11-19T09:15:11.601455104Z ---
+0	Thread-0	connecting to database
+1	Thread-0	shutting down service
+2	Thread-0	queried user table
+3	Thread-0	shutting down service
+4	Thread-0	closed database connection
+5	Thread-0	closed database connection
+6	Thread-0	connected to database
+7	Thread-0	connected to database
+8	Thread-0	loaded environment variables
+9	Thread-0	sent response to client
+10	Thread-1	validated request headers
+11	Thread-1	queried user table
+12	Thread-1	validated request headers
+13	Thread-1	starting HTTP server
+14	Thread-1	starting HTTP server
+15	Thread-1	initialized configuration
+16	Thread-1	starting HTTP server
+17	Thread-1	connecting to database
+18	Thread-1	queried user table
+19	Thread-1	sent response to client
+20	Thread-2	connecting to database
+21	Thread-2	connecting to database
+22	Thread-2	closed database connection
+23	Thread-2	loaded environment variables
+24	Thread-2	queried user table
+25	Thread-2	sent response to client
+26	Thread-2	connecting to database
+27	Thread-2	initialized configuration
+28	Thread-2	starting HTTP server
+29	Thread-2	starting HTTP server
+30	Thread-3	HTTP server listening on port 8080
+31	Thread-3	received client request
+32	Thread-3	queried user table
+33	Thread-3	connecting to database
+34	Thread-3	initialized configuration
+35	Thread-3	loaded environment variables
+36	Thread-3	starting HTTP server
+37	Thread-3	received client request
+38	Thread-3	shutting down service
+39	Thread-3	loaded environment variables
+40	Thread-4	queried user table
+
+--- 2025-11-19T09:17:50.820919931Z ---
+0	Thread-0	loaded environment variables
+1	Thread-0	closed database connection
+2	Thread-0	received client request
+3	Thread-0	connecting to database
+4	Thread-0	received client request
+5	Thread-0	loaded environment variables
+6	Thread-0	received client request
+7	Thread-0	received client request
+8	Thread-0	received client request
+9	Thread-0	queried user table
+10	Thread-1	connected to database
+11	Thread-1	closed database connection
+12	Thread-1	shutting down service
+13	Thread-1	connecting to database
+14	Thread-1	HTTP server listening on port 8080
+15	Thread-1	validated request headers
+16	Thread-1	sent response to client
+17	Thread-1	loaded environment variables
+18	Thread-1	received client request
+19	Thread-1	shutting down service
+20	Thread-2	queried user table
+21	Thread-2	queried user table
+22	Thread-2	connecting to database
+23	Thread-2	HTTP server listening on port 8080
+24	Thread-2	sent response to client
+25	Thread-2	sent response to client
+26	Thread-2	closed database connection
+27	Thread-2	closed database connection
+28	Thread-2	closed database connection
+29	Thread-2	sent response to client
+30	Thread-3	connected to database
+31	Thread-3	connected to database
+32	Thread-3	closed database connection
+33	Thread-3	HTTP server listening on port 8080
+34	Thread-3	received client request
+35	Thread-3	HTTP server listening on port 8080
+36	Thread-3	starting HTTP server
+37	Thread-3	loaded environment variables
+38	Thread-3	closed database connection
+39	Thread-3	loaded environment variables
+40	Thread-4	closed database connection
+41	Thread-4	closed database connection
+42	Thread-4	validated request headers
+43	Thread-4	connecting to database
+44	Thread-4	sent response to client
+45	Thread-4	loaded environment variables
+46	Thread-4	closed database connection
+47	Thread-4	queried user table
+48	Thread-4	connecting to database
+49	Thread-4	received client request
+
+--- 2025-11-19T09:18:00.175221363Z ---
+0	Thread-0	sent response to client
+1	Thread-0	validated request headers
+2	Thread-0	initialized configuration
+3	Thread-0	loaded environment variables
+4	Thread-0	sent response to client
+5	Thread-0	connecting to database
+6	Thread-0	loaded environment variables
+7	Thread-0	shutting down service
+8	Thread-0	initialized configuration
+9	Thread-0	connecting to database
+10	Thread-1	queried user table
+11	Thread-1	HTTP server listening on port 8080
+12	Thread-1	closed database connection
+13	Thread-1	validated request headers
+14	Thread-1	connected to database
+15	Thread-1	shutting down service
+16	Thread-1	HTTP server listening on port 8080
+17	Thread-1	starting HTTP server
+18	Thread-1	loaded environment variables
+19	Thread-1	closed database connection
+20	Thread-2	validated request headers
+
+--- 2025-11-19T09:21:00.416511901Z ---
+0	Thread-0	loaded environment variables
+1	Thread-0	starting HTTP server
+2	Thread-0	loaded environment variables
+3	Thread-0	connected to database
+4	Thread-0	connecting to database
+5	Thread-0	received client request
+6	Thread-0	closed database connection
+7	Thread-0	validated request headers
+8	Thread-0	closed database connection
+9	Thread-0	connecting to database
+10	Thread-1	validated request headers
+11	Thread-1	initialized configuration
+12	Thread-1	HTTP server listening on port 8080
+13	Thread-1	starting HTTP server
+14	Thread-1	starting HTTP server
+15	Thread-1	shutting down service
+16	Thread-1	received client request
+17	Thread-1	connected to database
+18	Thread-1	HTTP server listening on port 8080
+19	Thread-1	validated request headers
+20	Thread-2	connecting to database
+21	Thread-2	sent response to client
+22	Thread-2	sent response to client
+23	Thread-2	loaded environment variables
+24	Thread-2	validated request headers
+25	Thread-2	loaded environment variables
+26	Thread-2	HTTP server listening on port 8080
+27	Thread-2	loaded environment variables
+28	Thread-2	queried user table
+29	Thread-2	queried user table
+30	Thread-3	shutting down service
+31	Thread-3	received client request
+32	Thread-3	sent response to client
+33	Thread-3	queried user table
+34	Thread-3	shutting down service
+35	Thread-3	connecting to database
+36	Thread-3	connected to database
+37	Thread-3	connecting to database
+38	Thread-3	starting HTTP server
+39	Thread-3	received client request
+40	Thread-4	shutting down service
+41	Thread-4	starting HTTP server
+42	Thread-4	connecting to database
+43	Thread-4	initialized configuration
+44	Thread-4	validated request headers
+45	Thread-4	closed database connection
+46	Thread-4	sent response to client
+47	Thread-4	closed database connection
+48	Thread-4	received client request
+49	Thread-4	HTTP server listening on port 8080
+
+--- 2025-11-19T09:21:09.587528412Z ---
+0	Thread-0	sent response to client
+1	Thread-0	loaded environment variables
+2	Thread-0	sent response to client
+3	Thread-0	shutting down service
+4	Thread-0	initialized configuration
+5	Thread-0	loaded environment variables
+6	Thread-0	HTTP server listening on port 8080
+7	Thread-0	sent response to client
+8	Thread-0	starting HTTP server
+9	Thread-0	queried user table
+10	Thread-1	sent response to client
+11	Thread-1	starting HTTP server
+12	Thread-1	loaded environment variables
+13	Thread-1	queried user table
+14	Thread-1	connecting to database
+15	Thread-1	queried user table
+16	Thread-1	connected to database
+17	Thread-1	sent response to client
+18	Thread-1	received client request
+19	Thread-1	shutting down service
+20	Thread-2	starting HTTP server
+21	Thread-2	HTTP server listening on port 8080
+22	Thread-2	HTTP server listening on port 8080
+23	Thread-2	loaded environment variables
+24	Thread-2	received client request
+25	Thread-2	connecting to database
+26	Thread-2	starting HTTP server
+27	Thread-2	initialized configuration
+28	Thread-2	connecting to database
+29	Thread-2	connected to database
+30	Thread-3	starting HTTP server
+31	Thread-3	received client request
+32	Thread-3	connected to database
+33	Thread-3	validated request headers
+34	Thread-3	starting HTTP server
+35	Thread-3	starting HTTP server
+36	Thread-3	queried user table
+37	Thread-3	shutting down service
+38	Thread-3	connecting to database
+39	Thread-3	HTTP server listening on port 8080
+40	Thread-4	connecting to database
+
+--- 2025-11-19T09:21:13.020559571Z ---
+0	Thread-0	HTTP server listening on port 8080
+1	Thread-0	shutting down service
+2	Thread-0	initialized configuration
+3	Thread-0	sent response to client
+4	Thread-0	validated request headers
+5	Thread-0	connecting to database
+6	Thread-0	validated request headers
+7	Thread-0	starting HTTP server
+8	Thread-0	starting HTTP server
+9	Thread-0	shutting down service
+10	Thread-1	HTTP server listening on port 8080
+11	Thread-1	starting HTTP server
+12	Thread-1	sent response to client
+13	Thread-1	loaded environment variables
+14	Thread-1	connected to database
+15	Thread-1	connecting to database
+16	Thread-1	validated request headers
+17	Thread-1	connected to database
+18	Thread-1	received client request
+19	Thread-1	loaded environment variables
+20	Thread-2	starting HTTP server

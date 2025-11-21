@@ -13,3 +13,5 @@ nb-configuration.xml
 /bar/target/
 /rfi/target/
 /log3j/target/
+/proc/target/
+/YFactor/target/
